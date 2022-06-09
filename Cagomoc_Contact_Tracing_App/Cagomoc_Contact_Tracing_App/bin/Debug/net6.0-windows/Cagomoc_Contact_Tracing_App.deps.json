@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Cagomoc_Contact_Tracing_App/1.0.0": {
+        "runtime": {
+          "Cagomoc_Contact_Tracing_App.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Cagomoc_Contact_Tracing_App/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
