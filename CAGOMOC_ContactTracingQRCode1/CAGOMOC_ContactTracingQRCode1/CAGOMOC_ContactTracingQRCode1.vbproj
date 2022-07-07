@@ -1,0 +1,86 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <StartupObject>Sub Main</StartupObject>
+    <UseWindowsForms>true</UseWindowsForms>
+    <MyType>WindowsForms</MyType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Import Include="System.CodeDom.Compiler" />
+    <Import Include="System.Collections.Concurrent" />
+    <Import Include="System.Collections.Immutable" />
+    <Import Include="System.Collections.ObjectModel" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.ComponentModel" />
+    <Import Include="System.ComponentModel.DataAnnotations" />
+    <Import Include="System.ComponentModel.DataAnnotations.Schema" />
+    <Import Include="System.ComponentModel.Design" />
+    <Import Include="System.ComponentModel.Design.Serialization" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Configuration.Assemblies" />
+    <Import Include="System.Configuration.Internal" />
+    <Import Include="System.Configuration.Provider" />
+    <Import Include="System.Data" />
+    <Import Include="System.Data.Common" />
+    <Import Include="System.Data.Odbc" />
+    <Import Include="System.Data.OleDb" />
+    <Import Include="System.Data.OracleClient" />
+    <Import Include="System.Data.SqlClient" />
+    <Import Include="System.Data.SqlTypes" />
+    <Import Include="System.Diagnostics.CodeAnalysis" />
+    <Import Include="System.Diagnostics.Contracts" />
+    <Import Include="System.Diagnostics.Eventing.Reader" />
+    <Import Include="System.Diagnostics.Metrics" />
+    <Import Include="System.Diagnostics.PerformanceData" />
+    <Import Include="System.Diagnostics.SymbolStore" />
+    <Import Include="System.Diagnostics.Tracing" />
+    <Import Include="System.DirectoryServices" />
+    <Import Include="System.DirectoryServices.ActiveDirectory" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Drawing.Configuration" />
+    <Import Include="System.Drawing.Design" />
+    <Import Include="System.Drawing.Drawing2D" />
+    <Import Include="System.Drawing.Imaging" />
+    <Import Include="System.Drawing.Printing" />
+    <Import Include="System.Drawing.Text" />
+    <Import Include="System.Dynamic" />
+    <Import Include="System.Formats.Asn1" />
+    <Import Include="System.Globalization" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="ZXing" />
+    <Import Include="ZXing.Common" />
+    <Import Include="ZXing.QrCode" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ZXing.Net" Version="0.16.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="MessagingToolkit.QRCode">
+      <HintPath>..\..\..\..\Downloads\MP10_CALILUNG\WebCam_Capture\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="WebCam_Capture">
+      <HintPath>..\..\..\..\Downloads\WebCam_Capture\WebCam_Capture.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="My Project\Application.Designer.vb">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

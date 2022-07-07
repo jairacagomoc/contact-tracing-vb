@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "K79qjKLbWsPaG5JjQKvGM7PbjMjkOCVuXeXV4ovblUL1TugwiPHBEHOQJo6FR95Itm4AOb1fTmw1RADNMxU6FA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\63907\\Desktop\\Cagomoc_Contact_Tracing_App\\CAGOMOC_ContactTracingQRCode1\\CAGOMOC_ContactTracingQRCode1\\CAGOMOC_ContactTracingQRCode1.vbproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\63907\\.nuget\\packages\\zxing.net\\0.16.8\\zxing.net.0.16.8.nupkg.sha512"
+  ],
+  "logs": []
+}
