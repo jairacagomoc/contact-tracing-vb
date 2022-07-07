@@ -4,6 +4,7 @@ Imports MessagingToolkit.QRCode.Codec
 
 
 Public Class Form1
+    Dim iSubmit As DialogResult
     Dim iExit As DialogResult
     Dim iClear As DialogResult
     WithEvents mywebcam As WebCamCapture
@@ -36,25 +37,32 @@ Public Class Form1
     End Sub
     Private Sub Start_Click(sender As Object, e As EventArgs) Handles Button3.Click
         StartWebcam()
-        txtbox1.Clear()
     End Sub
 
     Private Sub Scan_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Try
-            Dim SD As New SaveFileDialog
             StopWebcam()
             reader = New QRCodeDecoder
             txtbox1.Text = reader.decode(New Data.QRCodeBitmapImage(PictureBox1.Image))
-            MsgBox("QRcode is now detected!", "Contact Tracing QRCode")
+            MsgBox("QRcode is now detected!")
+            'for QRCode
+            Dim SD As New SaveFileDialog
             SD.Filter = "PNG|*.png"
             If SD.ShowDialog() = DialogResult.OK Then
                 PictureBox1.Image.Save(SD.FileName, Imaging.ImageFormat.Png)
-                MsgBox("Data Saved!", "Contact Tracing QRCode")
+            End If
+            'for the text 
+            iSubmit = MessageBox.Show("Save Data?", "Contact Tracing QRCode", MessageBoxButtons.OKCancel, MessageBoxIcon.Information)
+            If iSubmit = DialogResult.OK Then
+                Dim file As System.IO.StreamWriter
+                file = My.Computer.FileSystem.OpenTextFileWriter("C:\Users\63907\Desktop\Cagomoc_Contact_Tracing_App\CAGOMOC_ContactTracingQRCode1\Data.txt", True)
+                file.WriteLine(txtbox1.Text)
+            Else
+                'do nothing 
             End If
         Catch ex As Exception
             MsgBox("QRcode is not detected!")
             StartWebcam()
-            txtbox1.Clear()
         End Try
     End Sub
 
